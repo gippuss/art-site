@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>История Искусства</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    const c = document.createElement('canvas');
+    c.width = c.height = 64;
+    const x = c.getContext('2d');
+    x.fillStyle = '#0d0d0d';
+    x.fillRect(0, 0, 64, 64);
+    x.fillStyle = '#c8a96e';
+    x.font = 'italic 38px Georgia, serif';
+    x.textAlign = 'center';
+    x.textBaseline = 'middle';
+    x.fillText('A', 32, 34);
+    const link = document.createElement('link');
+    link.rel = 'icon';
+    link.href = c.toDataURL();
+    document.head.appendChild(link);
+  </script>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="nav__logo">Ars</div>
+    <ul class="nav__links">
+      <li><a href="#hero">Начало</a></li>
+      <li><a href="#timeline">Эпохи</a></li>
+      <li><a href="#gallery">Галерея</a></li>
+      <li><a href="#quote">Цитата</a></li>
+    </ul>
+    <button class="nav__burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img src="img/hero.jpg" alt="Искусство" />
+    </div>
+    <div class="hero__content">
+      <p class="hero__label">С древности до наших дней</p>
+      <h1 class="hero__title">История<br/>Искусства</h1>
+      <p class="hero__sub">Путешествие сквозь века человеческого творчества</p>
+      <a href="#timeline" class="btn">Начать путешествие</a>
+    </div>
+    <div class="hero__scroll">↓</div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="container">
+      <p class="intro__text">
+        Искусство — это зеркало эпохи. Каждый штрих кисти, каждый удар молотка по камню хранит в себе душу времени, страхи и мечты людей, живших тысячелетия назад. Это не просто история — это живой разговор через века.
+      </p>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="timeline" id="timeline">
+    <div class="container">
+      <h2 class="section-title">Эпохи искусства</h2>
+    </div>
+
+    <!-- ERA 1: Prehistoric -->
+    <article class="era era--left" data-era="1">
+      <div class="era__image">
+        <img src="img/era1.jpg" alt="Первобытное искусство" />
+        <div class="era__image-caption">Пещера Ласко, Франция, ~17 000 лет до н.э.</div>
+      </div>
+      <div class="era__content">
+        <span class="era__date">40 000 – 3 000 до н.э.</span>
+        <h3 class="era__title">Первобытное искусство</h3>
+        <p class="era__text">
+          Наскальные рисунки, Venus-фигурки, дольмены — первые шаги человека к самовыражению. В пещерах Альтамиры и Ласко древние художники изображали бизонов и оленей с поразительной точностью, используя природные пигменты. Искусство здесь — магия, молитва и охота одновременно.
+        </p>
+        <div class="era__facts">
+          <div class="fact"><span class="fact__num">40 000</span><span class="fact__label">лет назад</span></div>
+          <div class="fact"><span class="fact__num">350+</span><span class="fact__label">пещер с росписью</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ERA 2: Ancient -->
+    <article class="era era--right" data-era="2">
+      <div class="era__image">
+        <img src="img/era2.jpg" alt="Древний Египет" />
+        <div class="era__image-caption">Большой Сфинкс в Гизе, Египет</div>
+      </div>
+      <div class="era__content">
+        <span class="era__date">3 000 – 500 до н.э.</span>
+        <h3 class="era__title">Древние цивилизации</h3>
+        <p class="era__text">
+          Египет, Месопотамия, Греция и Рим создали монументальное искусство, служившее богам и власти. Египтяне изображали фигуры по строгим канонам: глаз — анфас, тело — в профиль. Греки открыли гармонию пропорций и движение — скульптуры богов обрели жизнь.
+        </p>
+        <div class="era__facts">
+          <div class="fact"><span class="fact__num">138</span><span class="fact__label">пирамид в Египте</span></div>
+          <div class="fact"><span class="fact__num">2 500</span><span class="fact__label">лет греческой культуры</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ERA 3: Medieval -->
+    <article class="era era--left" data-era="3">
+      <div class="era__image">
+        <img src="img/era3.jpg" alt="Средневековье" />
+        <div class="era__image-caption">Готический собор, Европа</div>
+      </div>
+      <div class="era__content">
+        <span class="era__date">500 – 1400 н.э.</span>
+        <h3 class="era__title">Средние века</h3>
+        <p class="era__text">
+          Средневековое искусство целиком посвящено Богу. Витражи соборов превращают свет в теологию. Иконы Византии — окна в иной мир, написанные золотом и молчанием. Художники оставались анонимными: не они творили — через них говорил Господь.
+        </p>
+        <div class="era__facts">
+          <div class="fact"><span class="fact__num">1 000</span><span class="fact__label">лет эпохи</span></div>
+          <div class="fact"><span class="fact__num">≈ 80</span><span class="fact__label">великих соборов Европы</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ERA 4: Renaissance -->
+    <article class="era era--right" data-era="4">
+      <div class="era__image">
+        <img src="img/era4.jpg" alt="Ренессанс" />
+        <div class="era__image-caption">Флоренция — колыбель Возрождения</div>
+      </div>
+      <div class="era__content">
+        <span class="era__date">1400 – 1600</span>
+        <h3 class="era__title">Ренессанс</h3>
+        <p class="era__text">
+          Возрождение вернуло человека в центр мироздания. Леонардо да Винчи, Микеланджело, Рафаэль — эти имена стали синонимами гениальности. Перспектива, анатомия, светотень (сфумато) — художники изучали природу, чтобы превзойти её. «Мона Лиза» улыбается уже 520 лет.
+        </p>
+        <div class="era__facts">
+          <div class="fact"><span class="fact__num">1503</span><span class="fact__label">год «Моны Лизы»</span></div>
+          <div class="fact"><span class="fact__num">4</span><span class="fact__label">года росписи Сикстины</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ERA 5: Baroque & Romanticism -->
+    <article class="era era--left" data-era="5">
+      <div class="era__image">
+        <img src="img/era5.jpg" alt="Барокко" />
+        <div class="era__image-caption">Рембрандт ван Рейн, XVII век</div>
+      </div>
+      <div class="era__content">
+        <span class="era__date">1600 – 1850</span>
+        <h3 class="era__title">Барокко и Романтизм</h3>
+        <p class="era__text">
+          Барокко — это драма, экстаз и избыточность. Рубенс, Рембрандт, Бернини превратили свет и тень в оружие эмоций. Романтизм позднее обратился к природе и бунту: Делакруа писал революции, Каспар Давид Фридрих — одинокую фигуру перед бесконечным морем тумана.
+        </p>
+        <div class="era__facts">
+          <div class="fact"><span class="fact__num">1 500+</span><span class="fact__label">работ Рубенса</span></div>
+          <div class="fact"><span class="fact__num">600+</span><span class="fact__label">картин Рембрандта</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ERA 6: Impressionism -->
+    <article class="era era--right" data-era="6">
+      <div class="era__image">
+        <img src="img/era6.jpg" alt="Импрессионизм" />
+        <div class="era__image-caption">Клод Моне — сад в Живерни</div>
+      </div>
+      <div class="era__content">
+        <span class="era__date">1860 – 1910</span>
+        <h3 class="era__title">Импрессионизм</h3>
+        <p class="era__text">
+          Моне, Ренуар, Дега вышли из мастерских на улицу и стали ловить мимолётное — отражение солнца на воде, движение толпы, запах утра. Критики смеялись над «впечатлением» вместо детализации. Сегодня картины импрессионистов — самые дорогие в мире.
+        </p>
+        <div class="era__facts">
+          <div class="fact"><span class="fact__num">250+</span><span class="fact__label">картин серии «Стога»</span></div>
+          <div class="fact"><span class="fact__num">1874</span><span class="fact__label">первая выставка</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ERA 7: Modern & Contemporary -->
+    <article class="era era--left" data-era="7">
+      <div class="era__image">
+        <img src="img/era7.jpg" alt="Современное искусство" />
+        <div class="era__image-caption">Абстракция XX века</div>
+      </div>
+      <div class="era__content">
+        <span class="era__date">1910 – сегодня</span>
+        <h3 class="era__title">Модернизм и Современность</h3>
+        <p class="era__text">
+          XX век разрушил все правила. Пикассо раздробил форму на кубы, Малевич нашёл абсолют в чёрном квадрате, Дали опустил часы. Поп-арт, концептуализм, стрит-арт — сегодня искусством может быть всё. Вопрос не «что?», а «почему?».
+        </p>
+        <div class="era__facts">
+          <div class="fact"><span class="fact__num">1 937</span><span class="fact__label">год «Герники» Пикассо</span></div>
+          <div class="fact"><span class="fact__num">∞</span><span class="fact__label">форм современного арта</span></div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- DIVIDER -->
+  <section class="divider">
+    <div class="divider__inner">
+      <div class="divider__stat">
+        <span class="divider__num">40 000</span>
+        <span class="divider__label">лет истории</span>
+      </div>
+      <div class="divider__line"></div>
+      <div class="divider__stat">
+        <span class="divider__num">7</span>
+        <span class="divider__label">великих эпох</span>
+      </div>
+      <div class="divider__line"></div>
+      <div class="divider__stat">
+        <span class="divider__num">∞</span>
+        <span class="divider__label">шедевров</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <h2 class="section-title">Галерея шедевров</h2>
+      <p class="section-sub">Избранные работы, изменившие историю</p>
+    </div>
+    <div class="gallery__grid">
+      <div class="gallery__item gallery__item--wide">
+        <img src="img/gal1.jpg" alt="Шедевр" />
+        <div class="gallery__overlay">
+          <span class="gallery__name">Возрождение форм</span>
+          <span class="gallery__year">XV – XVI век</span>
+        </div>
+      </div>
+      <div class="gallery__item">
+        <img src="img/gal2.jpg" alt="Скульптура" />
+        <div class="gallery__overlay">
+          <span class="gallery__name">Мрамор и вечность</span>
+          <span class="gallery__year">Античность</span>
+        </div>
+      </div>
+      <div class="gallery__item">
+        <img src="img/gal3.jpg" alt="Живопись" />
+        <div class="gallery__overlay">
+          <span class="gallery__name">Цвет как язык</span>
+          <span class="gallery__year">XIX век</span>
+        </div>
+      </div>
+      <div class="gallery__item">
+        <img src="img/gal4.jpg" alt="Акварель" />
+        <div class="gallery__overlay">
+          <span class="gallery__name">Прозрачность акварели</span>
+          <span class="gallery__year">XVIII век</span>
+        </div>
+      </div>
+      <div class="gallery__item gallery__item--tall">
+        <img src="img/gal5.jpg" alt="Портрет" />
+        <div class="gallery__overlay">
+          <span class="gallery__name">Портрет эпохи</span>
+          <span class="gallery__year">XVII век</span>
+        </div>
+      </div>
+      <div class="gallery__item">
+        <img src="img/gal6.jpg" alt="Абстракция" />
+        <div class="gallery__overlay">
+          <span class="gallery__name">Язык абстракции</span>
+          <span class="gallery__year">XX век</span>
+        </div>
+      </div>
+      <div class="gallery__item">
+        <img src="img/gal7.jpg" alt="Архитектура" />
+        <div class="gallery__overlay">
+          <span class="gallery__name">Архитектура как арт</span>
+          <span class="gallery__year">Современность</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote" id="quote">
+    <div class="quote__bg">
+      <img src="img/quote.jpg" alt="фон" />
+    </div>
+    <div class="quote__content">
+      <blockquote>
+        «Искусство — это ложь, которая позволяет нам осознать истину»
+      </blockquote>
+      <cite>— Пабло Пикассо</cite>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__logo">Ars</div>
+      <p class="footer__copy">© 2026 · История Искусства</p>
+      <div class="footer__links">
+        <a href="#hero">Наверх</a>
+        <a href="#timeline">Эпохи</a>
+        <a href="#gallery">Галерея</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
