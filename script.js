@@ -7,17 +7,19 @@ window.addEventListener('scroll', () => {
 
 // ── Nav: burger menu ───────────────────────────────────────
 const burger = document.querySelector('.nav__burger');
-const navLinks = document.querySelector('.nav__links');
+const mobileMenu = document.getElementById('mobileMenu');
 
 burger.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('open');
+  const isOpen = mobileMenu.classList.toggle('open');
+  burger.classList.toggle('active', isOpen);
   burger.setAttribute('aria-expanded', isOpen);
   document.body.style.overflow = isOpen ? 'hidden' : '';
 });
 
-navLinks.querySelectorAll('a').forEach(link => {
+mobileMenu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    burger.classList.remove('active');
     document.body.style.overflow = '';
   });
 });
