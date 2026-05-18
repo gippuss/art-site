@@ -106,9 +106,9 @@ ul { list-style: none; }
   transition: transform 0.3s, opacity 0.3s;
 }
 
-.nav__burger.active span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav__burger.active span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); background: var(--white); }
 .nav__burger.active span:nth-child(2) { opacity: 0; }
-.nav__burger.active span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.nav__burger.active span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); background: var(--white); }
 
 /* ─────────────────────────────────────────
    BUTTON
@@ -609,11 +609,28 @@ cite {
     z-index: 150;
     transform: translateX(100%);
     transition: transform 0.35s ease;
+    /* нужен для абсолютного крестика */
   }
 
   .mobile-menu.open {
     transform: translateX(0);
   }
+
+  .mobile-menu__close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: rgba(245, 244, 240, 0.6);
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    line-height: 1;
+    transition: color 0.2s;
+  }
+
+  .mobile-menu__close:hover { color: var(--gold); }
 
   .mobile-menu__link {
     font-size: 1.6rem;

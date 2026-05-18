@@ -8,6 +8,13 @@ window.addEventListener('scroll', () => {
 // ── Nav: burger menu ───────────────────────────────────────
 const burger = document.querySelector('.nav__burger');
 const mobileMenu = document.getElementById('mobileMenu');
+const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+function closeMenu() {
+  mobileMenu.classList.remove('open');
+  burger.classList.remove('active');
+  document.body.style.overflow = '';
+}
 
 burger.addEventListener('click', () => {
   const isOpen = mobileMenu.classList.toggle('open');
@@ -16,12 +23,10 @@ burger.addEventListener('click', () => {
   document.body.style.overflow = isOpen ? 'hidden' : '';
 });
 
+mobileMenuClose.addEventListener('click', closeMenu);
+
 mobileMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    burger.classList.remove('active');
-    document.body.style.overflow = '';
-  });
+  link.addEventListener('click', closeMenu);
 });
 
 // ── Era cards: IntersectionObserver fade-in ─────────────────
