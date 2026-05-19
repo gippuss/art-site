@@ -542,6 +542,19 @@ cite {
   letter-spacing: 0.05em;
 }
 
+.footer__contact {
+  font-size: 0.75rem;
+  color: var(--gray);
+  letter-spacing: 0.05em;
+}
+
+.footer__contact a {
+  color: var(--gold);
+  transition: opacity 0.2s;
+}
+
+.footer__contact a:hover { opacity: 0.7; }
+
 .footer__links {
   display: flex;
   gap: 2rem;
